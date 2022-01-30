@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Questionnaire>
+  <Name>Дефолтная анкета</Name>
+  <Code>DefaultQuestionaire</Code>
+  <SaveFileName>{fio}.txt</SaveFileName>
+  <TextTemplate>1. ФИО: {fio}
+2. Дата рождения: {birthdate}
+3. Любимый язык программирования: {prog_language}
+4. Опыт программирования на указанном языке: {prog_experience}
+5. Мобильный телефон: {phone}
+
+Анкета заполнена: {fill_date};
+  </TextTemplate>
+  <Questions>
+    <Question >
+      <Text>ФИО</Text>
+      <Code>fio</Code>
+    </Question>
+    <Question >
+      <Text>Дата рождения (Формат ДД.ММ.ГГГГ)</Text>
+      <Code>birthdate</Code>
+      <Mask>^(0?[1-9]|[12][0-9]|3[01]).(0?[1-9]|1[012]).((19|20)\d\d)$</Mask>
+      <CheckType>DateTime</CheckType>
+    </Question>
+    <Question>
+      <Text>Любимый язык программирования</Text>
+      <Code>prog_language</Code>
+      <Mask>^(PHP|JavaScript|C|C\+\+|Java|C#|Python|Ruby)$</Mask>
+    </Question>
+    <Question>
+      <Text>Опыт программирования на указанном языке (Полных лет)</Text>
+      <Code>prog_experience</Code>
+      <Mask>^[1-9]|[1-9][0-9]$</Mask>
+    </Question>
+    <Question>
+      <Text>Мобильный телефон</Text>
+      <Code>phone</Code>
+    </Question>
+  </Questions>
+</Questionnaire>
